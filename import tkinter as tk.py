@@ -134,4 +134,7 @@ tree.insert('', 'end', text='Folder B', values=('1200 bytes'))
 
 app.mainloop()
 
+git add .
+git commit -m "main2.py to main.py"
+git push
 
