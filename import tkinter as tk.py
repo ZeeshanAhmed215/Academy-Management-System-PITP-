@@ -135,4 +135,3 @@ tree.insert('', 'end', text='Folder B', values=('1200 bytes'))
 app.mainloop()
 
 
-
