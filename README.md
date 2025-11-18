@@ -53,12 +53,6 @@ A **CustomerTkinter-based Desktop Application** for educational institutes to ma
 ---
 
 
----
-
-
----
-
-
 ## 🚀 **How to Run the Academy Management System**
 
 Follow these steps to properly set up and run the application.
