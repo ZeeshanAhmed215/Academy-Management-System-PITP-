@@ -25,7 +25,7 @@ A **CustomerTkinter-based Desktop Application** for educational institutes to ma
 * **Student ID Card Generator**
 
   * Creates official-looking student ID cards
-  * Includes student photo, ID, batch, department
+  * Includes Name, ID, batch, department
   * Saves output as PDF
 
 * **Student Course Certificate Generator**
@@ -47,32 +47,101 @@ A **CustomerTkinter-based Desktop Application** for educational institutes to ma
 
 * **Python**
 * **CustomTkinter (Modern UI)**
-* **ReportLab / FPDF (PDF Generation)**
-* **Pillow (Image Processing)**
-* **OS & Pathlib** for file handling
+* **FPDF (PDF Generation)**
+* **MySQL** Data storage
 
 ---
 
 
 ---
 
-## 🚀 **How to Run the Project**
 
-### 1️⃣ Install required libraries
+---
 
+
+## 🚀 **How to Run the Academy Management System**
+
+Follow these steps to properly set up and run the application.
+
+---
+
+## **1️⃣ Create the MySQL Database**
+
+Open **MySQL Workbench / XAMPP phpMyAdmin / Terminal** and create a new database:
+
+```sql
+CREATE DATABASE academy_management;
 ```
+
+---
+
+## **2️⃣ Create Required Table**
+
+After creating the database, run this SQL command to create the **admin** table:
+
+```sql
+CREATE TABLE admin (
+    StudentId INT AUTO_INCREMENT PRIMARY KEY,
+    Student_Name VARCHAR(100) NOT NULL,
+    Father_Name VARCHAR(100) NOT NULL,
+    CNIC VARCHAR(100) UNIQUE NOT NULL,
+    Father_CNIC VARCHAR(100) UNIQUE NOT NULL,
+    Gender VARCHAR(100) NOT NULL,
+    DOB VARCHAR(100) NOT NULL,
+    Phone VARCHAR(100) NOT NULL,
+    Address VARCHAR(300) NOT NULL,
+    Father_pro VARCHAR(100) NOT NULL,
+    Course VARCHAR(100) NOT NULL,
+    Admission_Date VARCHAR(100) NOT NULL,
+    Course_Duration VARCHAR(100) NOT NULL,
+    Passing_Date VARCHAR(100) NOT NULL,
+    Fee_Status VARCHAR(100) NOT NULL
+);
+```
+
+---
+
+## **3️⃣ Connect Your MySQL Database to the App**
+
+In your project, open your database connection file (like `db.py`, `connection.py`, or wherever you handled DB).
+
+Update your credentials:
+
+```python
+import mysql.connector
+
+db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="YOUR_PASSWORD",
+    database="academy_management"
+)
+```
+
+
+
+---
+
+## **4️⃣ Install Required Python Libraries**
+
+Run these commands in terminal:
+
+```bash
 pip install customtkinter
 pip install pillow
 pip install fpdf
-pip install mysql-connector-python 
+pip install mysql-connector-python
 ```
 
-### 2️⃣ Run the main application
+---
 
-```
+## **5️⃣ Run the Application**
+
+After installing the requirements, run:
+
+```bash
 main.py
-```
-
+``
 ---
 
 ## 📄 **Generated PDFs**
