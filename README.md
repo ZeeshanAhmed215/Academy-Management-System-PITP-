@@ -61,7 +61,7 @@ Follow these steps to properly set up and run the application.
 
 ## **1️⃣ Create the MySQL Database**
 
-Open **MySQL Workbench / XAMPP phpMyAdmin / Terminal** and create a new database:
+Open **MySQL Workbench
 
 ```sql
 CREATE DATABASE academy_management;
