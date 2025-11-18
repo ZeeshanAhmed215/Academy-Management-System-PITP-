@@ -97,7 +97,7 @@ CREATE TABLE admin (
 
 ## **3️⃣ Connect Your MySQL Database to the App**
 
-In your project, open your database connection file (like `db.py`, `connection.py`, or wherever you handled DB).
+In your project, open your main.py
 
 Update your credentials:
 
@@ -135,10 +135,9 @@ After installing the requirements, run:
 
 ```bash
 main.py
-``
----
 
-## 📄 **Generated PDFs**
+```
+##  **Generated PDFs**
 
 This system automatically generates:
 
@@ -148,19 +147,7 @@ This system automatically generates:
 | Student ID Card    | PDF    | Printable ID card (single or batch)    |
 | Course Certificate | PDF    | Official course completion certificate |
 
----
 
-## 🎨 **UI Preview**
-
-*(Add screenshots here if available)*
-
-* Modern CustomTkinter Windows
-* Regeisteration Form
-* Challan Preview
-* ID Card Template
-* Certificate Template
-
----
 
 ## 🤝 **Contributions**
 
